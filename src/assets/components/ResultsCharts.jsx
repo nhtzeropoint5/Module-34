@@ -1,11 +1,45 @@
-import React from 'react';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  CartesianGrid,
+  ResponsiveContainer,
+} from "recharts";
+
+const data = [
+  { id: 1, name: "Ayan", physics: 85, chemistry: 78, math: 90 },
+  { id: 2, name: "Nabila", physics: 92, chemistry: 88, math: 95 },
+  { id: 3, name: "Rahim", physics: 70, chemistry: 75, math: 72 },
+  { id: 4, name: "Sadia", physics: 88, chemistry: 82, math: 86 },
+  { id: 5, name: "Tanvir", physics: 60, chemistry: 68, math: 65 },
+  { id: 6, name: "Mim", physics: 95, chemistry: 91, math: 97 },
+  { id: 7, name: "Rafi", physics: 72, chemistry: 70, math: 74 },
+  { id: 8, name: "Jannat", physics: 80, chemistry: 85, math: 83 },
+  { id: 9, name: "Sakib", physics: 68, chemistry: 72, math: 70 },
+  { id: 10, name: "Farhan", physics: 90, chemistry: 87, math: 92 },
+];
 
 const ResultsCharts = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <div className="w-full max-w-2xl mx-auto">
+      <ResponsiveContainer width="100%" height={350}>
+        <LineChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+
+          <Line type="monotone" dataKey="math" stroke="#8884d8" />
+          <Line type="monotone" dataKey="physics" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="chemistry" stroke="#ff7300" />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  );
 };
 
 export default ResultsCharts;

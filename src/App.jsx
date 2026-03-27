@@ -5,11 +5,15 @@ import DaisyNav from './assets/components/daisyNav'
 import Navbar from './assets/components/Navbar/Navbar'
 import Pricing from './assets/components/pricingOpt/Pricing'
 import ResultsCharts from './assets/components/ResultsCharts'
+import axios from 'axios'
+import MarksChart from './assets/components/markschart/MarksChart.'
 
 
 function App() {
  
 const pkk = fetch('./src/assets/components/pricingOpt/PricingData.json').then(res => res.json());
+
+const marksPromise = axios.get('./src/assets/components/marks.json')
 
 
   return (
@@ -21,6 +25,10 @@ const pkk = fetch('./src/assets/components/pricingOpt/PricingData.json').then(re
       <Pricing pkk ={pkk}></Pricing>
     </Suspense>
     <ResultsCharts></ResultsCharts>
+
+    <Suspense>
+      <MarksChart data={marksPromise}></MarksChart>
+    </Suspense>
     
     </>
   )

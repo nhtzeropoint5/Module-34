@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Basic",
+    "price": 0,
+    "duration": "month",
+    "features": [
+      "1 user",
+      "Basic support",
+      "Limited access",
+      "Community help"
+    ],
+    "isPopular": false
+  },
+  {
+    "id": 2,
+    "name": "Standard",
+    "price": 9,
+    "duration": "month",
+    "features": [
+      "5 users",
+      "Priority support",
+      "Full access",
+      "Basic analytics"
+    ],
+    "isPopular": true
+  },
+  {
+    "id": 3,
+    "name": "Premium",
+    "price": 29,
+    "duration": "month",
+    "features": [
+      "Unlimited users",
+      "24/7 support",
+      "Advanced analytics",
+      "Custom integrations"
+    ],
+    "isPopular": false
+  },
+  {
+    "id": 4,
+    "name": "Business",
+    "price": 59,
+    "duration": "month",
+    "features": [
+      "Unlimited users",
+      "Dedicated manager",
+      "Advanced security",
+      "API access"
+    ],
+    "isPopular": false
+  },
+  {
+    "id": 5,
+    "name": "Enterprise",
+    "price": 99,
+    "duration": "month",
+    "features": [
+      "Custom users",
+      "Premium support",
+      "Full customization",
+      "Dedicated infrastructure"
+    ],
+    "isPopular": false
+  }
+]
